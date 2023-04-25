@@ -14,6 +14,7 @@ variable "cluster_log_retention" {}
 variable "vpc_cni_version" {}
 variable "coredns_version" {}
 variable "kube_proxy_version" {}
+variable "kube_proxy_version_test" {}
 variable "aws_ebs_csi_version" {}
 variable "alert_channel" {}
 

@@ -10,7 +10,7 @@ terraform {
     hostname     = "app.terraform.io"
     organization = "twdps"
     workspaces {
-      prefix = "lab-platform-eks-base-"
+      prefix = "cohort-base-platform-eks-base-"
     }
   }
 }
@@ -19,14 +19,14 @@ provider "aws" {
   region = var.aws_region
   assume_role {
     role_arn     = local.authentication_role
-    session_name = "lab-platform-eks-base"
+    session_name = "cohort-base-platform-eks-base"
   }
 
   default_tags {
     tags = {
       env      = var.cluster_name
       cluster  = var.cluster_name
-      pipeline = "lab-platform-eks-base"
+      pipeline = "cohort-base-platform-eks-base"
     }
   }
 }
